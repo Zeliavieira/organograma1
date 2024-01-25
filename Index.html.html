@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .organograma {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .cargo {
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f2f9fc; /* Azul claro */
+            text-align: center;
+            position: relative;
+            overflow: visible;
+        }
+
+        .nivel {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nivel > .cargo {
+            flex: 1;
+            margin: 10px;
+            position: relative;
+        }
+
+        .cargo > h3 {
+            margin: 0 0 10px;
+            padding: 0;
+            font-size: 18px;
+            color: #004080; /* Azul escuro */
+        }
+
+        .cargo > p {
+            margin: 0 0 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .cargo > img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .cargo > ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .subcargo {
+            margin-left: 20px;
+            border: none;
+            background-color: transparent;
+            padding: 5px;
+        }
+
+        .seta {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid #ddd;
+        }
+    </style>
+    <title>Organograma Alimenta</title>
+</head>
+<body>
+    <div class="organograma">
+        <div class="nivel">
+            <div class="cargo">
+                <img src="imagens/diretor.jpg" alt="Diretor-Geral">
+                <h3>Diretor-Geral</h3>
+                <p>Responsável pelas funções administrativas. Coordena o trabalho dos gerentes de cada divisão.</p>
+                <ul>
+                    <li>Funções Administrativas</li>
+                    <li>Coordenação dos Gerentes</li>
+                </ul>
+            </div>
+        </div>
+        <div class="nivel">
+            <div class="cargo">
+                <div class="seta"></div>
+                <img src="imagens/gerente comercial.jpg" alt="Gerente Comercial">
+                <h3>Divisão Comercial</h3>
+                <p>Gerente Comercial: Responsável por liderar a equipe de vendas. Gerencia as relações com os clientes.</p>
+                <ul>
+                    <li>Equipe de Vendas</li>
+                    <li>Relações com Clientes</li>
+                </ul>
+            </div>
+            <div class="cargo">
+                <div class="seta"></div>
+                <img src="imagens/gerente industrial.jpg" alt="Gerente Industrial">
+                <h3>Divisão Industrial</h3>
+                <p>Gerente Industrial: Supervisiona a produção. Garante controle de qualidade. Dirige atividades de pesquisa e desenvolvimento.</p>
+                <ul>
+                    <li>Produção</li>
+                    <li>Controle de Qualidade</li>
+                    <li>Pesquisa e Desenvolvimento</li>
+                </ul>
+            </div>
+            <div class="cargo">
+                <div class="seta"></div>
+                <img src="imagens/gerente financeiro.jpg" alt="Gerente Financeiro">
+                <h3>Divisão Financeira</h3>
+                <p>Gerente Financeiro: Responsável pela contabilidade. Supervisiona a tesouraria. Lida com finanças corporativas.</p>
+                <ul>
+                    <li>Contabilidade</li>
+                    <li>Tesouraria</li>
+                    <li>Finanças Corporativas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
